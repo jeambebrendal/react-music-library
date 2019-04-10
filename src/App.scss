@@ -1,0 +1,263 @@
+.navbar.row {
+  margin-left: 0;
+  margin-right: 0;
+
+  nav {
+    a {
+      text-decoration: none;
+
+      img {
+        width: 60px;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-left: 5px;
+      }
+    }
+  }
+  .fav {
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+.App {
+  .search-result {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem 2.5rem;
+    overflow: auto;
+
+    h1.artist {
+      text-transform: capitalize;
+      font-size: 2rem;
+      font-weight: 700;
+      padding-bottom: 15px;
+      margin-bottom: 1rem;
+    }
+    h2.top-songs {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .content {
+      margin-left: -2rem;
+      padding-bottom: 1rem;
+
+      .data {
+        width: 24.08rem;
+        display: inline-block;
+        min-height: 51px;
+        margin-left: 2rem;
+
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 5px;
+          display: inline-block;
+          margin-bottom: 3px;
+        }
+        .details {
+          border-top: 1px solid #e5e5e5;
+          margin-left: 10px;
+          width: calc(100% - 59px);
+          display: inline-block;
+
+          .title {
+            font-size: 13px;
+            line-height: 1.38462;
+            font-weight: 400;
+            letter-spacing: -0.005em;
+            margin-bottom: 0;
+          }
+          .album-releaseDate {
+            margin-top: 1px;
+            max-width: 100%;
+            color: #8e8e93;
+            font-size: 12px;
+            line-height: 1.33341;
+            font-weight: 400;
+            letter-spacing: 0;
+            margin-bottom: 0;
+
+            span:first-child {
+              padding-right: 5px;
+            }
+            span:last-child {
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .album-container {
+    background-color: rgba(0, 0, 0, 0.125);
+
+    .content {
+      padding: 2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      overflow: auto;
+
+      .album {
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+        -webkit-box-shadow: 0 1px 7px 1px #534242;
+        -moz-box-shadow: 0 1px 7px 1px #534242;
+        box-shadow: 0 1px 7px 1px #534242;
+
+        .sticker {
+          background-color: #ffc107;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 35px;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 700;
+          text-decoration: underline;
+          top: 10px;
+          left: 10px;
+        }
+        img {
+          width: 100%;
+          min-height: 100%;
+        }
+        .details {
+          h5.title {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #007bff;
+          }
+          p {
+            font-size: 0.85rem;
+
+            b {
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            }
+          }
+          button.btn {
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 0;
+          }
+        }
+      }
+      button.btn-lg {
+        font-size: 1.1rem;
+        display: block;
+        margin: 0 auto;
+        clear: left;
+      }
+      .alert.alert-danger {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .fav.btn.btn-primary {
+    margin: 1rem 0 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0 !important;
+
+    .App-header {
+      display: flex;
+      -webkit-justify-content: center !important;
+      justify-content: center !important;
+      margin-bottom: 1rem;
+    }
+    .form-inline.col-sm-12 {
+      -webkit-justify-content: center !important;
+      justify-content: center !important;
+
+      .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+        margin-right: 0.5rem !important;
+      }
+      .btn.btn-outline-primary {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .album {
+    width: (100%/1)-2;
+    margin: 0 1%;
+    float: left;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .album {
+    width: (100%/2)-2;
+    margin: 0 1%;
+    float: left;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .album {
+    width: (100%/3)-2;
+    margin: 0 1%;
+    float: left;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .album {
+    width: (100%/4)-2;
+    margin: 0 1%;
+    float: left;
+
+    &:nth-child(4n + 5) {
+      clear: left;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .album {
+    &:nth-child(3n + 4) {
+      clear: left;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .search-result .content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    width: auto;
+    min-width: 100%;
+    white-space: nowrap;
+  }
+}
